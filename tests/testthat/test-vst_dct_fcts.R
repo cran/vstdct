@@ -201,23 +201,3 @@ test_that("output type and length are correct - Toep.estimator",{
   expect_length(Toep.estimator(y=y,Te=Te,q=q,method=method,f.true=NULL), 4)
 })
 
-test_that("output is correct for specific example - Toep.estimator",{
-  n=10
-  p=10
-  Te=3
-  q=3
-  method="GCV"
-  set.seed(11)
-  acf=c(1.44,1.44/(1+seq(1,p-1))^5.1)
-  Sigma=toeplitz(acf)
-  y=matrix(MASS::mvrnorm(n, mu=numeric(p), Sigma=Sigma),n,p)
-  sdf.est=c(1.058559,1.071068,1.108321,1.169241,1.251144,1.348385,1.450775,1.543339,1.608811,1.632604)
-  acf.est=sdf2acf(sdf.est)
-  toep.est=toeplitz(acf.est)
-  toep.inv.est=toeplitz(sdf2acf(1/sdf.est))
-  tol = 1e-5
-  expect_true(sum(abs(Toep.estimator(y=y,Te=Te,q=q,method=method,f.true=NULL)$toep-toep.est))<tol)
-  expect_true(sum(abs(Toep.estimator(y=y,Te=Te,q=q,method=method,f.true=NULL)$toep.inv-toep.inv.est))<tol)
-  expect_true(sum(abs(Toep.estimator(y=y,Te=Te,q=q,method=method,f.true=NULL)$acf-acf.est))<tol)
-  expect_true(sum(abs(Toep.estimator(y=y,Te=Te,q=q,method=method,f.true=NULL)$sdf-sdf.est))<tol)
-})

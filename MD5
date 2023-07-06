@@ -1,4 +1,4 @@
-128af8cae0b47a16044b6d5e7758e8be *DESCRIPTION
+ba6091eae998cf0d1f5034db9bb918d2 *DESCRIPTION
 db92d04ae0eeba86e3b81547e8b67e3d *NAMESPACE
 3ab08951be1d4c87d8e52b6b5802ae89 *R/data.R
 83ad8f61f2b8f6618b21235f71b6cde5 *R/per_DR_basis.R
@@ -15,4 +15,4 @@ ec814b3f14f57153b489f6e3834c480a *tests/testthat.R
 32111eb9b3e477ebaadda9e399c17c58 *tests/testthat/test-per_DR_basis.R
 884c51fae54fbe3fcaf07b381465cf58 *tests/testthat/test-simulate_data_fcts.R
 e935edaab114d019115a3d927d868bc4 *tests/testthat/test-trigonometric_fcts.R
-626da49ae4ee58d72443302ab8617a4f *tests/testthat/test-vst_dct_fcts.R
+31b64443e9faced22367cad54597dcb8 *tests/testthat/test-vst_dct_fcts.R
